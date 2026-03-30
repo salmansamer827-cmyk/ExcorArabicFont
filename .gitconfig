@@ -1,0 +1,12 @@
+[user]
+	name = Your Name
+	email = your_email@example.com
+[credential "https://github.com"]
+	helper = 
+	helper = !/data/data/com.termux/files/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/data/data/com.termux/files/usr/bin/gh auth git-credential
+[safe]
+	directory = /storage/emulated/0/.FileManagerRecycler/-539050831_PassiveBot_temp/ExcorArabicFont
+	directory = /storage/emulated/0/.FileManagerRecycler/-539050831_PassiveBot_temp/ExcorArabicFont
