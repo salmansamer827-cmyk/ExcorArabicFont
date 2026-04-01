@@ -1,441 +1,500 @@
+git commit -m "Final fix for logo and paths"
+git push origin master --force
+cd ~/EXCORA
+# تحديث الرابط في هاتفك ليكون مطابقاً للتوكن الجديد
+git remote set-url origin https://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@github.com/salmansamer827-cmyk/EXCORA.git
+# محاولة رفع الشعار مجدداً
+git add .
+git commit -m "Update assets"
+git push origin master --force
+cd ~/EXCORA
 termux-setup-storage
-buildozer.spec
-android.permissions = READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE, MANAGE_EXTERNAL_STORAGE
-pkg update && pkg upgrade
-pkg install python
-pip install pandas
-pkg update && pkg upgrade
-pkg install python git
-ls
-file DOC-20260327-WA0000
-python DOC-20260327-WA0000
-git clone https://github.com/username/repository_name.git
-nano final_success.py
-python final_success.py
-pip install python-bidi
-# اطلب الإذن للوصول لذاكرة الهاتف إذا لم تفعل ذلك سابقاً
+mkdir -p assets/images
+cp /sdcard/Download/1000018110.png assets/images/logo.png
+ls assets/images
+# 1. الدخول للمجلد الرئيسي
+cd ~/EXCORA
+# 2. إنشاء المجلدات الفرعية للأصول (Assets)
+mkdir -p assets/images assets/fonts
+# 3. نقل الشعار (The Crucial Step)
+# افترضنا أن الشعار موجود في التحميلات واسمه 1000018110.png
+cp /sdcard/Download/1000018110.png assets/images/logo.png
+# 4. الرفع النهائي (تأكد من وجود الأنترنت)
+git add .
+git commit -m "UI: Final assets structure with official logo"
+git push origin master --force
+# 1. الدخول للمشروع
+cd ~/EXCORA
+# 2. حذف الملفات والمجلدات الزائدة أو التالفة التي ظهرت في LS سابقاً
+rm -rf bin .buildozer storage test_Black.png test_font.py
+# 3. إنشاء الهيكل الهرمي الجديد بنظافة
+mkdir -p assets/images assets/fonts
+# 4. نقل الشعار لمكانه الصحيح وتسميته logo.png
+cp /sdcard/Download/1000018110.png assets/images/logo.png
+# 5. نقل الخطوط العربية لمجلد fonts (إذا كانت في المجلد الرئيسي)
+mv *.ttf assets/fonts/ 2>/dev/null
+# 6. تحديث GitHub بالهيكل الجديد "النظيف"
+git add .
+git commit -m "Cleanup: Reorganized project structure and assets"
+git push origin master --force
+ls -R
+# 1. الدخول للمجلد والتنظيف الشامل
+cd ~/EXCORA
+rm -rf bin .buildozer storage test_Black.png test_font.py
+rm -rf downloads my_font_pack ExcorArabicFont SMC_Alerts_Bot
+# 2. إنشاء الهيكل الهرمي الجديد
+mkdir -p assets/images assets/fonts
+# 3. ترتيب الصورة (الشعار الرسمي)
+# تأكد من وجود ملف 1000018110.png في التحميلات
+cp /sdcard/Download/1000018110.png assets/images/logo.png
+# 4. نقل كافة الخطوط العربية لمكانها الجديد
+mv *.ttf assets/fonts/ 2>/dev/null
+# 5. حذف أي بقايا ملفات بايثون مكررة (اختياري)
+# احتفظ فقط بـ main.py وما تحتاجه فعلياً
+# الدخول للمجلد
+cd ~/EXCORA
+# حذف المجلدات والملفات الزائدة تماماً لتنظيف المشروع
+rm -rf ExcorArabicFont SMC_Alerts_Bot bin .buildozer storage test_Black.png test_font.py downloads my_font_pack
+# إعادة إنشاء الهيكل الهرمي بنظافة
+mkdir -p assets/images assets/fonts
+# نقل الشعار لمكانه الصحيح (تأكد من وجود الصورة في التحميلات)
+cp /sdcard/Download/1000018110.png assets/images/logo.png
+# نقل الخطوط البرمجية لمجلد الخطوط
+mv *.ttf assets/fonts/ 2>/dev/null
+# رفع الترتيب الجديد لـ GitHub
+git add .
+git commit -m "Cleanup: Final hierarchical structure and assets organization"
+git push origin master --force
+cd ~/EXCORA
+# تأكد من نقل الشعار إذا لم ينقل بعد
+cp /sdcard/Download/1000018110.png assets/images/logo.png
+# رفع التعديلات النهائية
+git add .
+git commit -m "Final Hierarchy: Assets cleaned and logo placed"
+git push origin master --force
+# 1. الدخول لمجلد مشروعك الأساسي
+cd ~/EXCORA
+# 2. التأكد من وجود مجلد الصور
+mkdir -p assets/images
+# 3. نقل الصورة (تأكد من رقم الصورة الصحيح في التحميلات)
+# سنقوم بتسميتها background.png ليتعرف عليها كود البايثون
+cp /sdcard/Download/1000017310.jpg assets/images/background.png
+# 1. تأكيد الدخول للمجلد الرئيسي
+cd ~/
+# 2. إذا لم يكن المجلد موجوداً، قم بسحبه فوراً (قد يستغرق وقتاً)
+# إذا كان موجوداً، سيعطيك خطأ "already exists"، تجاهله.
+git clone https://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@github.com/salmansamer827-cmyk/EXCORA.git
+# 3. الدخول لمجلد المشروع بنجاح
+cd EXCORA
+# 4. نقل الشعار (The Crucial Step)
+mkdir -p assets/images
+cp /sdcard/Download/1000018110.png assets/images/logo.png
+# 5. نقل صورة الخلفية (The AI background)
+cp /sdcard/Download/1000017310.jpg assets/images/background.png
+# 6. الرفع النهائي للسيرفر (تأكد من وجود الأنترنت)
+git add .
+git commit -m "UI: Official assets (logo and AI background) integrated"
+git push origin master --force
+cd ~/EXCORA
+git remote remove origin
+git remote add origin https://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@github.com/salmansamer827-cmyk/EXCORA.git
+git remote -v
+# 1. الدخول للمجلد (تأكد من كتابة الاسم بدقة)
+cd ~/EXCORA
+# 2. إنشاء مجلدات الأصول الهرمية
+mkdir -p assets/images assets/fonts
+# 3. منح Termux صلاحية الوصول للذاكرة (إذا لم تفعل ذلك سابقاً)
 termux-setup-storage
-# انقل الملف إلى مجلد Downloads في هاتفك
-cp Corporate_Package_V1.apk /sdcard/Download/
-nano buildozer.spec
-title = EXCORA
-icon.filename = logo.png
-presplash.filename = logo.png
-nano buildozer.spec
-icon.filename = %(source.dir)s/logo.png
-nano buildozer.spec
-# حذف الملفات المؤقتة القديمة
-buildozer android clean
-# بناء ملف APK جديد بالإعدادات الجديدة
-buildozer android debug
-cp bin/*.apk /sdcard/Download/
-cp /sdcard/Download/logo.png .
-# 1. إعطاء إذن الوصول لذاكرة الهاتف (اضغط "سماح" إذا ظهرت نافذة)
+# 4. نسخ الشعار والخلفية إلى مسار الأصول
+cp /sdcard/Download/1000018110.png assets/images/logo.png
+cp /sdcard/Download/1000017310.jpg assets/images/background.png
+# 5. الرفع النهائي لـ GitHub لتحديث Colab
+git add .
+git commit -m "UI: Official assets and logo placement"
+git push origin master --force
+cd ~/EXCORA
+# مسح الرابط القديم
+git remote remove origin
+# إضافة الرابط الجديد بالتوكن الصحيح (تأكد من نسخ السطر كاملاً)
+git remote add origin https://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@github.com/salmansamer827-cmyk/EXCORA.git
+# التأكد من وجود الصور قبل الرفع
+mkdir -p assets/images
+cp /sdcard/Download/1000018110.png assets/images/logo.png
+cp /sdcard/Download/1000017310.jpg assets/images/background.png
+# الرفع النهائي
+git add .
+git commit -m "Integrated logo and AI background"
+git push -u origin master --force
 termux-setup-storage
-# 2. نسخ الصورة من مجلد التحميلات إلى مجلد مشروعك الحالي
-cp /sdcard/Download/logo.png .
-termux-setup-storage
-cp logo.png /sdcard/Download/
-nano buildozer.spec
-buildozer android clean
-buildozer android debug
-nano buildozer.spec
-icon.filename = %(source.dir)s/logo.png
-title = EXCORA
-nano buildozer.spec
-icon.filename = %(source.dir)s/logo.png
-icon.filename
-presplash.filename = %(source.dir)s/logo.png
-buildozer android clean
-buildozer android debug
-nano buildozer.spec
-buildozer android clean
-buildozer android debug
-nano buildozer.spec
-python3 -m buildozer android debug
+cp ~/storage/downloads/logs/IMG_20260327_170529_572.png ~/storage/shared/EXCORA/assets/images/logo.png
+ls ~/storage/shared/EXCORA/assets/images/
+mkdir -p ~/storage/shared/EXCORA/assets/images
+cp /sdcard/Download/logs/IMG_20260327_170529_572.png ~/storage/shared/EXCORA/assets/images/logo.png
+ls ~/storage/shared/EXCORA/assets/images/
+import os
+%cd /content/
+# 1. إنشاء هيكل المجلدات داخل المشروع المرفوع
+# 2. نقل الشعار لمكانه الصحيح
+if os.path.exists('logo.png'):
+# 3. حل مشكلة FileNotFoundError لملف buildozer
+%cd EXCORA
+if not os.path.exists('buildozer.spec'):
+# 4. تحديث الإعدادات للأيقونة والأزرار العربية
+with open('buildozer.spec', 'r') as f:
+with open('buildozer.spec', 'w') as f:
+cp /sdcard/Download/logs/IMG_20260327_170529_572.png ~/storage/shared/EXCORA/assets/images/logo.png
+ls ~/storage/shared/EXCORA/assets/images/
+clear
+# إنشاء مجلد المشروع
+mkdir ExcorArabicFont && cd ExcorArabicFont
+# إنشاء المجلدات الفرعية للأوزان والتصاميم
+mkdir sources builds tests
+# إنشاء ملف التكويد الخاص بخصائص الخط العربي
+touch sources/features.fea
+# تهيئة المستودع لـ GitHub
+git init
+pip install ufoLib2 fonttools
+git config --global user.email "your_email@example.com"
+git config --global user.name "Your Name"
+git add .
+git commit -m "Initial project structure and master builder script"
+git remote add origin [رابط المستودع الذي نسخته]
+git branch -M main
+git push -u origin main
+# 1. ربط المجلد بالمستودع البعيد
+git remote add origin https://github.com/salmansamer827-cmyk/ExcorArabicFont.git
+# 2. تسمية الفرع الأساسي (للتأكد)
+git branch -M main
+# 3. محاولة الرفع لأول مرة
+git push -u origin main
+git config --global --add safe.directory /storage/emulated/0/.FileManagerRecycler/-539050831_PassiveBot_temp/ExcorArabicFont
+git remote add origin https://github.com/salmansamer827-cmyk/ExcorArabicFont.git
+git remote set-url origin https://github.com/salmansamer827-cmyk/ExcorArabicFont.git
+git push -u origin main
+git add .
+git commit -m "First commit: Initial font project structure"
+git branch -M main
+git push -u origin main
+python build_masters.py
+git add .
+git commit -m "Update builder to support multiple glyphs and 4 weights"
+git push
+# استعراض الملفات للتأكد
 ls
-cp /sdcard/Download/logo.png .
-pip install buildozer
-[app]
-title = EXCORA
-package.name = excora
-package.domain = org.samer
-source.dir = .
-icon.filename = %(source.dir)s/logo.png
-nano buildozer.spec
-buildozer android debug
-cp /sdcard/Download/logo.png .
-pip install buildozer
-buildozer android debug
-pip install setuptools
-buildozer android debug
-pkg update && pkg upgrade
-pkg install liblzma libbz2 zlib
-ls
-cp /storage/emulated/0/Download/logo.png .
-buildozer android debug
-export CFLAGS="-I$PREFIX/include"
-export LDFLAGS="-L$PREFIX/lib"
-nano buildozer.spec
-cp /sdcard/Download/logo.png .
-buildozer android debug
-buildozer android clean
-pkg install binutils pkg-config
-termux-setup-storage
-buildozer android clean
-cp /sdcard/Download/logo.png .
-nano buildozer.spec
-LDFLAGS="-L$PREFIX/lib" CFLAGS="-I$PREFIX/include" buildozer android debug
-# 1. مسح شامل لكل ملفات البناء القديمة الفاشلة
-buildozer android clean
-# 2. تحديث روابط المكتبات في تيرموكس
-pkg install libandroid-support
-# 3. إجبار المترجم على رؤية المكتبات (هذا هو السر)
-export CFLAGS="-I$PREFIX/include"
-export LDFLAGS="-L$PREFIX/lib"
-export CPPFLAGS="-I$PREFIX/include"
-find /sdcard -name "logo.png" -exec cp {} . \;
-ls
-export CFLAGS="-I$PREFIX/include"
-export LDFLAGS="-L$PREFIX/lib"
-export CPPFLAGS="-I$PREFIX/include"
-ls
-راً):
-requirements = python3,kivy,zlib,libandroid-support
-nano buildozer.spec
-buildozer android clean
-buildozer android debug
-find /sdcard -name "logo.png" -exec cp {} . \;
-cat <<EOF > buildozer.spec
-[app]
-title = EXCORA
-package.name = excora
-package.domain = org.samer
-source.dir = .
-version = 0.1
-requirements = python3,kivy,zlib,libandroid-support
-icon.filename = %(source.dir)s/logo.png
-orientation = portrait
-fullscreen = 0
-android.archs = arm64-v8a
+# إذا رأيت ملف build_masters.py في القائمة، نفذه الآن:
+python build_masters.py
+git add .
+git commit -m "Complete parametric builder with 4 weights and basic glyph set"
+git push
+# الانتقال إلى المجلد الحالي
+cd /storage/emulated/0/.FileManagerRecycler/-539050831_PassiveBot_temp/ExcorArabicFont
+# نسخ كل المحتويات إلى مجلد جديد في الـ Home الخاص بـ Termux
+cp -r . ~/ExcorArabicFont
+# الانتقال للمجلد الجديد المستقر
+cd ~/ExcorArabicFont
+cat <<EOF > build_masters.py
+import os
+from fontTools.fontBuilder import FontBuilder
+from fontTools.pens.ttGlyphPen import TTGlyphPen
+
+def draw_dot(pen, x, y, thick):
+    size = thick * 1.2
+    pen.moveTo((x, y)); pen.lineTo((x + size, y))
+    pen.lineTo((x + size, y + size)); pen.lineTo((x, y + size))
+    pen.closePath()
+
+def draw_alef(pen, thick):
+    pen.moveTo((100, 0)); pen.lineTo((100, 700))
+    pen.lineTo((100 + thick, 700)); pen.lineTo((100 + thick, 0))
+    pen.closePath()
+
+def draw_beh_base(pen, thick):
+    w = 600
+    pen.moveTo((50, 200)); pen.lineTo((50, 0)); pen.lineTo((50 + w, 0)); pen.lineTo((50 + w, 200))
+    pen.lineTo((50 + w - thick, 200)); pen.lineTo((50 + w - thick, thick))
+    pen.lineTo((50 + thick, thick)); pen.lineTo((50 + thick, 200))
+    pen.closePath()
+
+def create_font_variant(name, thick):
+    fb = FontBuilder(1000, isTTF=True)
+    glyphs = {".notdef": TTGlyphPen(None).getGlyph()}
+    cmap = {}
+    for g_name, func, code in [("alef-ar", draw_alef, 0x0627), ("beh-ar", draw_beh_base, 0x0628)]:
+        pen = TTGlyphPen(None)
+        func(pen, thick)
+        glyphs[g_name] = pen.getGlyph()
+        cmap[code] = g_name
+    dot_pen = TTGlyphPen(None)
+    draw_dot(dot_pen, 300, -150, thick)
+    glyphs["dot-ar"] = dot_pen.getGlyph()
+    fb.setupGlyphOrder(list(glyphs.keys()))
+    fb.setupGlyf(glyphs)
+    fb.setupCharacterMap(cmap)
+    fb.setupNameTable({"familyName": "ExcorArabic", "styleName": name})
+    fb.setupOS2(sTypoAscender=750, usWinAscent=900, usWinDescent=400)
+    fb.setupPost()
+    os.makedirs("builds", exist_ok=True)
+    fb.save(f"builds/ExcorArabic-{name}.ttf")
+    print(f"✅ Created: {name}")
+
+if __name__ == "__main__":
+    weights = {"Light": 30, "Regular": 70, "Medium": 110, "Bold": 170}
+    for n, t in weights.items():
+        create_font_variant(n, t)
 EOF
 
-LDFLAGS="-L$PREFIX/lib" CFLAGS="-I$PREFIX/include" buildozer android debug
-buildozer.spec
-nanobuildozer.spec
-nano buildozer.spec
-find /sdcard -name "logo.png" -exec cp {} . \;
-# تنظيف الملفات المعطوبة
-buildozer android clean
-# بدء البناء مع إرسال الأوامر للمترجم
-LDFLAGS="-L$PREFIX/lib" CFLAGS="-I$PREFIX/include" buildozer android debug
-nanobuildozer.spec
-nano buildozer.spec
-find /sdcard -name "logo.png" -exec cp {} . \;
-LDFLAGS="-L$PREFIX/lib" CFLAGS="-I$PREFIX/include" buildozer android debug
-rm buildozer.spec
-nano buildozer.spec
-find /sdcard -name "logo.png" -exec cp {} . \;
-LDFLAGS="-L$PREFIX/lib" CFLAGS="-I$PREFIX/include" buildozer android debug
-cat <<EOF > buildozer.spec
-[app]
-title = EXCORA
-package.name = excora
-package.domain = org.samer
-source.dir = .
-version = 0.1
-requirements = python3,kivy,zlib,libandroid-support
-icon.filename = %(source.dir)s/logo.png
-orientation = portrait
-fullscreen = 0
-android.archs = arm64-v8a
+# تشغيل البناء
+python build_masters.py
+# ستظهر لك رسائل النجاح للأوزان الأربعة ✅
+git add .
+git commit -m "Relocated project to Termux home and fixed builder script"
+git push
+cat <<EOF > build_masters.py
+import os
+from fontTools.fontBuilder import FontBuilder
+from fontTools.pens.ttGlyphPen import TTGlyphPen
+
+def draw_dot(pen, x, y, thick):
+    size = thick * 1.2
+    pen.moveTo((x, y))
+    pen.lineTo((x + size, y))
+    pen.lineTo((x + size, y + size))
+    pen.lineTo((x, y + size))
+    pen.closePath()
+
+def draw_alef(pen, thick):
+    pen.moveTo((100, 0)); pen.lineTo((100, 700))
+    pen.lineTo((100 + thick, 700)); pen.lineTo((100 + thick, 0))
+    pen.closePath()
+
+def draw_beh_base(pen, thick):
+    w = 600
+    pen.moveTo((50, 200)); pen.lineTo((50, 0)); pen.lineTo((50 + w, 0)); pen.lineTo((50 + w, 200))
+    pen.lineTo((50 + w - thick, 200)); pen.lineTo((50 + w - thick, thick))
+    pen.lineTo((50 + thick, thick)); pen.lineTo((50 + thick, 200))
+    pen.closePath()
+
+def create_font_variant(name, thick):
+    fb = FontBuilder(1000, isTTF=True)
+    
+    # تصحيح دالة الحصول على الجليف: glyph() بدلاً من getGlyph()
+    glyphs = {".notdef": TTGlyphPen(None).glyph()}
+    cmap = {}
+    
+    for g_name, func, code in [("alef-ar", draw_alef, 0x0627), ("beh-ar", draw_beh_base, 0x0628)]:
+        pen = TTGlyphPen(None)
+        func(pen, thick)
+        glyphs[g_name] = pen.glyph()
+        cmap[code] = g_name
+
+    dot_pen = TTGlyphPen(None)
+    draw_dot(dot_pen, 300, -150, thick)
+    glyphs["dot-ar"] = dot_pen.glyph()
+
+    fb.setupGlyphOrder(list(glyphs.keys()))
+    fb.setupGlyf(glyphs)
+    fb.setupCharacterMap(cmap)
+    fb.setupNameTable({"familyName": "ExcorArabic", "styleName": name})
+    fb.setupOS2(sTypoAscender=750, usWinAscent=900, usWinDescent=400)
+    fb.setupPost()
+    
+    os.makedirs("builds", exist_ok=True)
+    fb.save(f"builds/ExcorArabic-{name}.ttf")
+    print(f"✅ تم بناء الوزن: {name}")
+
+if __name__ == "__main__":
+    weights = {"Light": 30, "Regular": 70, "Medium": 110, "Bold": 170}
+    for n, t in weights.items():
+        create_font_variant(n, t)
 EOF
 
-ls
-find /sdcard -name "logo.png" -exec cp {} . \;
-LDFLAGS="-L$PREFIX/lib" CFLAGS="-I$PREFIX/include" buildozer android debug
-buildozer android clean
-LDFLAGS="-L$PREFIX/lib" CFLAGS="-I$PREFIX/include" buildozer android debug
-rm buildozer.specbuildozer.spec
-CPATH="$PREFIX/include" LIBRARY_PATH="$PREFIX/lib" LDFLAGS="-L$PREFIX/lib" CFLAGS="-I$PREFIX/include" buildozer android debug
-export CPATH="$PREFIX/include"
-export LIBRARY_PATH="$PREFIX/lib"
-export LDFLAGS="-L$PREFIX/lib"
-buildozer android clean
-CFLAGS="-I$PREFIX/include" LDFLAGS="-L$PREFIX/lib" buildozer android debug
-ln -s $PREFIX/include/zlib.h $PREFIX/include/zlib1g-dev.h
-export CFLAGS="-I$PREFIX/include"
-export LDFLAGS="-L$PREFIX/lib"
-export CPPFLAGS="-I$PREFIX/include"
-buildozer android debug
-pkg update && pkg upgrade -y
-pkg install python clang make git libffi openssl zlib -y
-pkg install libjpeg-turbo freetype -y
-ls $PREFIX/include/zlib.h
-pkg reinstall zlib
-export CFLAGS="-I$PREFIX/include"
-export LDFLAGS="-L$PREFIX/lib"
-export CPPFLAGS="-I$PREFIX/include"
-rm -rf .buildozer
-buildozer android debug
-nano buildozer.spec
-# تنظيف أثر المحاولة الفاشلة الأخيرة
-buildozer android clean
-# إطلاق البناء النهائي
-LDFLAGS="-L$PREFIX/lib" CFLAGS="-I$PREFIX/include" buildozer android debug
-CFLAGS="-I$PREFIX/include" LDFLAGS="-L$PREFIX/lib" buildozer android debug
-CPATH="$PREFIX/include" LIBRARY_PATH="$PREFIX/lib" LDFLAGS="-L$PREFIX/lib" CFLAGS="-I$PREFIX/include" buildozer android debug
-LDFLAGS="-L$PREFIX/lib" CFLAGS="-I$PREFIX/include" buildozer android debug
-buildozer android debug
-clear
-pkg update && pkg upgrade
-pkg install ffmpeg
-ffmpeg -loop 1 -i logo.png -i music.mp3 -c:v libx264 -t 15 -vf "zoompan=z='min(zoom+0.0015,1.5)':d=125,fade=t=in:st=0:d=2" -pix_fmt yuv420p -c:a aac -shortest output.mp4
-ffmpeg -loop 1 -i logo.png -i music.mp3 -vf "drawtext=text='EXCORA':fontcolor=white:fontsize=40:x=(w-text_w)/2:y=h-100,fade=t=in:st=0:d=2" -t 15 -c:v libx264 -c:a aac -shortest output.mp4
-clear
-# تثبيت المتطلبات
-pkg update
-pkg install python
-pip install fonttools
-from fontTools.ttLib import TTFont
-def prepare_for_windows(input_file, output_name):
-# مثال للاستخدام
-# prepare_for_windows('your_font.ttf', 'ExcorNewFont')
-# إنشاء ملف جديد باسم font_fix.py
-nano font_fix.py
-python font_fix.py
-from PIL import Image, ImageDraw, ImageFont
-def create_ad(text, price):
-# استدعاء الوظيفة
-# create_ad("تخفيضات إكسكورا", "25,000 د.ع")
-from fontTools.ttLib import TTFont
-def create_weight(input_font, output_name, weight_value):
-# توليد الأوزان الأربعة
-# create_weight('Changa-Regular.ttf', 'Light', 300)
-# create_weight('Changa-Regular.ttf', 'Regular', 400)
-# create_weight('Changa-Regular.ttf', 'Bold', 700)
-# create_weight('Changa-Regular.ttf', 'Black', 900)
-nano weights.py
-python weights.py
-from fontTools.ttLib import TTFont
-# 1. تعريف الوظيفة أولاً
-def create_weight(input_font, output_name, weight_value):
-# 2. استدعاء الوظيفة ثانياً (يجب أن يكون ملف Changa-Regular.ttf في نفس المجلد)
-create_weight('Changa-Regular.ttf', 'Light', 300)
-create_weight('Changa-Regular.ttf', 'Regular', 400)
-create_weight('Changa-Regular.ttf', 'Bold', 700)
-create_weight('Changa-Regular.ttf', 'Black', 900)
-mkdir my_font_pack
-cp Changa_*.ttf my_font_pack/
-cd ~
+# تشغيل بناء الخطوط
+python build_masters.py
+# رفع التعديلات النهائية إلى GitHub
+git add build_masters.py
+git commit -m "Fix: correct glyph() method in build script"
+git push
+import os
+from fontTools.fontBuilder import FontBuilder
+from fontTools.pens.ttGlyphPen import TTGlyphPen
+def draw_dot(pen, x, y, thick):
+if __name__ == "__main__":;     weights = {"Light": 30, "Regular": 70, "Medium": 110, "Bold": 170};     for n, t in weights.items():
+cat <<EOF > build_masters.py
+import os
+from fontTools.fontBuilder import FontBuilder
+from fontTools.pens.ttGlyphPen import TTGlyphPen
 
-python weights.py
-termux-setup-storage
-cp /sdcard/Download/Changa-Regular.ttf .
-python weights.py
-find /sdcard -name "Changa-Regular.ttf" -exec cp {} . \;
+def draw_dot(pen, x, y, thick):
+    size = thick * 1.2
+    pen.moveTo((x, y)); pen.lineTo((x + size, y))
+    pen.lineTo((x + size, y + size)); pen.lineTo((x, y + size))
+    pen.closePath()
+
+def draw_alef(pen, thick):
+    pen.moveTo((100, 0)); pen.lineTo((100, 700))
+    pen.lineTo((100 + thick, 700)); pen.lineTo((100 + thick, 0))
+    pen.closePath()
+
+def draw_beh_base(pen, thick):
+    w = 600
+    pen.moveTo((50, 200)); pen.lineTo((50, 0)); pen.lineTo((50 + w, 0)); pen.lineTo((50 + w, 200))
+    pen.lineTo((50 + w - thick, 200)); pen.lineTo((50 + w - thick, thick))
+    pen.lineTo((50 + thick, thick)); pen.lineTo((50 + thick, 200))
+    pen.closePath()
+
+def create_font_variant(name, thick):
+    fb = FontBuilder(1000, isTTF=True)
+    glyphs = {".notdef": TTGlyphPen(None).glyph()}
+    cmap = {}
+    metrics = {".notdef": (0, 0)}
+    for g_name, func, code in [("alef-ar", draw_alef, 0x0627), ("beh-ar", draw_beh_base, 0x0628)]:
+        pen = TTGlyphPen(None)
+        func(pen, thick)
+        glyphs[g_name] = pen.glyph()
+        cmap[code] = g_name
+        metrics[g_name] = (800, 100)
+    dot_pen = TTGlyphPen(None)
+    draw_dot(dot_pen, 300, -150, thick)
+    glyphs["dot-ar"] = dot_pen.glyph()
+    metrics["dot-ar"] = (0, 0)
+    fb.setupGlyphOrder(list(glyphs.keys()))
+    fb.setupGlyf(glyphs)
+    fb.setupCharacterMap(cmap)
+    fb.setupHorizontalMetrics(metrics)
+    fb.setupNameTable({"familyName": "ExcorArabic", "styleName": name})
+    fb.setupOS2(sTypoAscender=750, usWinAscent=900, usWinDescent=400)
+    fb.setupPost()
+    os.makedirs("builds", exist_ok=True)
+    fb.save(f"builds/ExcorArabic-{name}.ttf")
+    print(f"✅ تم بناء الوزن: {name}")
+
+if __name__ == "__main__":
+    weights = {"Light": 30, "Regular": 70, "Medium": 110, "Bold": 170}
+    for n, t in weights.items():
+        create_font_variant(n, t)
+EOF
+
+python build_masters.py
+git add build_masters.py
+git commit -m "Fix: correctly formatted build script"
+git push
+cat <<EOF > build_masters.py
+import os
+from fontTools.fontBuilder import FontBuilder
+from fontTools.pens.ttGlyphPen import TTGlyphPen
+
+# --- دالات الرسم الهندسي ---
+def draw_dot(pen, x, y, thick):
+    size = thick * 1.3
+    pen.moveTo((x, y)); pen.lineTo((x + size, y))
+    pen.lineTo((x + size, y + size)); pen.lineTo((x, y + size))
+    pen.closePath()
+
+def draw_alef(pen, thick):
+    pen.moveTo((100, 0)); pen.lineTo((100, 750))
+    pen.lineTo((100 + thick, 750)); pen.lineTo((100 + thick, 0))
+    pen.closePath()
+
+def draw_beh_base(pen, thick):
+    w = 650
+    pen.moveTo((50, 200)); pen.lineTo((50, 0)); pen.lineTo((50 + w, 0)); pen.lineTo((50 + w, 200))
+    pen.lineTo((50 + w - thick, 200)); pen.lineTo((50 + w - thick, thick))
+    pen.lineTo((50 + thick, thick)); pen.lineTo((50 + thick, 200))
+    pen.closePath()
+
+def draw_noon_base(pen, thick):
+    # رسم منحنى النون باستخدام Quadratic Bezier لجمالية احترافية
+    pen.moveTo((100, 300))
+    pen.qCurveTo((100, -150), (400, -150), (700, 300))
+    pen.lineTo((700 - thick, 300))
+    pen.qCurveTo((400, -150 + thick), (100 + thick, 300))
+    pen.closePath()
+
+# --- المحرك الرئيسي ---
+def create_font_variant(name, thick):
+    fb = FontBuilder(1000, isTTF=True)
+    glyphs = {".notdef": TTGlyphPen(None).glyph()}
+    cmap = {}
+    metrics = {".notdef": (0, 0)}
+
+    # مصفوفة الحروف الكاملة
+    char_map = [
+        ("alef-ar", draw_alef, 0x0627, 850),
+        ("beh-ar", draw_beh_base, 0x0628, 850),
+        ("noon-ar", draw_noon_base, 0x0646, 850)
+    ]
+
+    for g_name, func, code, width in char_map:
+        pen = TTGlyphPen(None)
+        func(pen, thick)
+        glyphs[g_name] = pen.glyph()
+        cmap[code] = g_name
+        metrics[g_name] = (width, 100)
+
+    # إضافة النقاط (مثال لنقطة الباء)
+    dot_pen = TTGlyphPen(None)
+    draw_dot(dot_pen, 300, -180, thick)
+    glyphs["dot-ar"] = dot_pen.glyph()
+    metrics["dot-ar"] = (0, 0)
+
+    # الترتيب الصحيح للجداول (Crucial Fix)
+    fb.setupGlyphOrder(list(glyphs.keys()))
+    fb.setupGlyf(glyphs)
+    fb.setupCharacterMap(cmap)
+    fb.setupHorizontalMetrics(metrics) # يجب أن يسبق OS/2
+    
+    fb.setupNameTable({
+        "familyName": "ExcorArabic",
+        "styleName": name,
+        "uniqueFontIdentifier": f"ExcorArabic-{name}",
+        "fullName": f"ExcorArabic {name}",
+        "psName": f"ExcorArabic-{name}"
+    })
+    
+    fb.setupOS2(sTypoAscender=750, usWinAscent=950, usWinDescent=450)
+    fb.setupPost()
+    
+    os.makedirs("builds", exist_ok=True)
+    fb.save(f"builds/ExcorArabic-{name}.ttf")
+    print(f"✅ تم بنجاح تصدير الوزن: {name}")
+
+if __name__ == "__main__":
+    # الأوزان الأربعة القياسية
+    weights = {"Light": 35, "Regular": 75, "Medium": 120, "Bold": 180}
+    for n, t in weights.items():
+        create_font_variant(n, t)
+EOF
+
+# 1. بناء ملفات الـ TTF للأوزان الأربعة
+python build_masters.py
+# 2. رفع النسخة النهائية والمستقرة إلى GitHub
+git add build_masters.py
+git commit -m "Final build engine: Added curves support and fixed table sequencing"
+git push
+ls ~/ExcorArabicFont/builds
+cd ~/ExcorArabicFont
 ls
-python weights.py
-curl -L -o Changa-Regular.ttf https://github.com/google/fonts/raw/main/ofl/changa/Changa-Regular.ttf
-python weights.py
-rm Changa-Regular.ttf
-wget https://github.com/google/fonts/raw/main/ofl/changa/Changa%5Bwght%5D.ttf -O Changa-Regular.ttf
-python weights.py
-pkg install wget -y
-wget "https://github.com/google/fonts/raw/main/ofl/changa/Changa%5Bwght%5D.ttf" -O Changa-Regular.ttf
-python weights.py
-cp Changa_*.ttf /sdcard/Download/
-from PIL import Image, ImageDraw, ImageFont
-def test_my_font(weight_name):
-# جرب الوزن العريض مثلاً
-test_my_font("Black")
-nano test_font.py
-python test_font.py
-cp test_Black.png /sdcard/Download/
-pkg install libjpeg-turbo libpng python-tkinter -y
-pip install Pillow
-python test_font.py
-cp test_Black.png /sdcard/Download/
-nano create_catalog.py
-python create_catalog.py
-cp Changa_Specimen.png /sdcard/Download/
-ls *.png
-cp Changa_Specimen.png /sdcard/DCIM/
-cp test_Black.png /sdcard/DCIM/
-termux-media-scan /sdcard/DCIM/Changa_Specimen.png
-termux-media-scan /sdcard/DCIM/test_Black.png
-termux-open /sdcard/DCIM/Changa_Specimen.png
-pip install arabic-reshaper python-bidi
-pip install arabic-reshaper
-from PIL import Image, ImageDraw, ImageFont
-import arabic_reshaper
-def draw_arabic_neon():
-draw_arabic_neon() python changa_arabic.py
-cp Arabic_Neon.png /sdcard/DCIM/
-nano changa_arabic.py
-python changa_arabic.py
-cp Arabic_Neon.png /sdcard/DCIM/
-termux-open /sdcard/DCIM/Arabic_Neon.png
-termux-open /sdcard/Download/Changa_Pro_Pack.zip
-from PIL import Image, ImageDraw, ImageFont
-import arabic_reshaper
-def draw_perfect_arabic():
-draw_perfect_arabic() nano final_arabic.py
-nano final_arabic.py
-python final_arabic.py
-pip install arabic-reshaper python-bidi
-pkg install rust
-pip install python-bidi
-pkg install python
-pip install pandas pandas_ta ccxt python-telegram-bot
-pkg update && pkg upgrade
-pkg install clang python-flask ninja cmake rust binutils
-pkg install tur-repo
-pkg install python-numpy python-pandas
-pkg update && pkg upgrade
+ls builds/
+pkg install rclone
+rclone config
+# هذا الأمر سينشئ مجلدًا في درايف باسم ExcorProject وينقل الخطوط إليه
+rclone copy ~/ExcorArabicFont/builds GDrive:ExcorProject -P
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+# مسار ملف الخط الذي صنعته
+font_path = '/data/data/com.termux/files/home/ExcorArabicFont/builds/ExcorArabic-Bold.ttf'
+prop = fm.FontProperties(fname=font_path)
+plt.text(0.5, 0.5, 'أ ب ت ث ج ح خ', fontproperties=prop, fontsize=40, ha='center')
+plt.show()
+fc-query ~/ExcorArabicFont/builds/ExcorArabic-Bold.ttf | grep "fullname"
+# لعرض معلومات تقنية عن ملف الخط الذي صنعته
+fc-query ~/ExcorArabicFont/builds/ExcorArabic-Bold.ttf | grep "fullname"
+pkg install fontconfig-utils
+fc-query ~/ExcorArabicFont/builds/ExcorArabic-Bold.ttf | grep "fullname"
 termux-setup-storage
-pkg install python-numpy python-pandas
-pip install ccxt python-telegram-bot
-# تثبيت المستودع الذي يحتوي على نسخ جاهزة للأندرويد
-pkg install tur-repo
-# تثبيت المكتبات الأساسية مباشرة
-pkg install python-pandas python-numpy python-cryptography
-# الآن ثبت المكتبات الخفيفة التي لا تسبب مشاكل
-pip install ccxt python-telegram-bot
-ba_isol.png
-ba_init.png
-ba_medi.png
-ba_fina.png
-mkdir SMC_Alerts_Bot && cd SMC_Alerts_Bot
-mkdir src data utils
-touch config.py main.py requirements.txt README.md
-# config.py
-# إعدادات المستخدم - قم بتغيير القيم أدناه
-API_KEY = "YOUR_BINANCE_API_KEY"
-API_SECRET = "YOUR_BINANCE_SECRET"
-TELEGRAM_TOKEN = "YOUR_BOT_TOKEN"
-CHAT_ID = "YOUR_CHAT_ID"
-# إعدادات الاستراتيجية
-SYMBOL = "BTC/USDT"
-TIMEFRAME = "1h"
-# ألوان الرسائل (Neon Style للنتائج)
-COLOR_UP = "🟢"
-COLOR_DOWN = "🔴"
-# سنستخدم مكتبة pandas لتحليل البيانات
-def check_fvg(df):
-def send_telegram_msg(message):
-print(f"🚀 Bot Started for {SYMBOL}...")
-while True:;     try:
-        ohlcv = exchange.fetch_ohlcv(SYMBOL, timeframe=TIMEFRAME, limit=5)
-pip install ccxt requests pandas
-nano main.py
-python main.py
-cd SMC_Alerts_Bot
-nano main.py
-python main.py
-pip install ccxt requests pandas
-pip install ccxt requests
-import ccxt
-import time
-import requests
-# --- إعداداتك (يجب ملؤها) ---
-TOKEN = "ضـع_تـوكـن_بـوتـك_هـنـا"
-CHAT_ID = "ضـع_الأيـدي_الـخـاص_بـك"
-SYMBOL = "BTC/USDT"
-# الاتصال بالمنصة
-ex = ccxt.binance()
-def send_alert(msg):
-print(f"🚀 تم التشغيل! أراقب {SYMBOL} حالياً...")
-while True:;     try:
-        bars = ex.fetch_ohlcv(SYMBOL, timeframe='1h', limit=5)
-python main.py
-nano main.py
-~
-import ccxt
-import time
-import requests
-# --- بيانات التليجرام (ضع بياناتك هنا) ---
-TOKEN = "ضـع_تـوكـن_بـوتـك"
-CHAT_ID = "ضـع_الأيـدي_الـخـاص_بـك"
-SYMBOL = "BTC/USDT"
-ex = ccxt.binance()
-def send_alert(msg):
-print(f"🚀 البوت يعمل الآن لمراقبة {SYMBOL}...")
-while True:;     try:
-        data = ex.fetch_ohlcv(SYMBOL, timeframe='1h', limit=5)
-rm main.py && nano main.py
-~
-python main.py
-pip install ccxt requests
-~
-import ccxt
-import time
-import requests
-# --- إعدادات التليجرام ---
-TOKEN = "ضـع_تـوكـن_بـوتـك_هـنـا"
-CHAT_ID = "ضـع_الأيـدي_الـخـاص_بـك"
-SYMBOL = "BTC/USDT"
-ex = ccxt.binance()
-def send_alert(msg):
-print(f"🚀 البوت يعمل لمراقبة {SYMBOL}...")
-while True:;     try:
-        data = ex.fetch_ohlcv(SYMBOL, timeframe='1h', limit=5)
-python main.py
-import ccxt
-import time
-import requests
-# --- إعدادات التليجرام ---
-# استبدل هذه القيم ببياناتك الحقيقية
-TOKEN = "ضـع_تـوكـن_بـوتـك_هـنـا"
-CHAT_ID = "ضـع_الأيـدي_الـخـاص_بـك"
-SYMBOL = "BTC/USDT"
-ex = ccxt.binance()
-def send_alert(msg):
-print(f"🚀 البوت يعمل الآن لمراقبة {SYMBOL}...")
-while True:;     try:
-        data = ex.fetch_ohlcv(SYMBOL, timeframe='1h', limit=5)
-python main.py
-pip install ccxt requests
-nano main.py
-import ccxt
-import time
-import requests
-# --- إعدادات التليجرام ---
-TOKEN = "ضـع_تـوكـن_بـوتـك_هـنـا"
-CHAT_ID = "ضـع_الأيـدي_الـخـاص_بـك"
-SYMBOL = "BTC/USDT"
-ex = ccxt.binance()
-def send_alert(msg):
-print(f"🚀 البوت يعمل الآن لمراقبة {SYMBOL}...")
-while True:;     try:
-        data = ex.fetch_ohlcv(SYMBOL, timeframe='1h', limit=5)
-import ccxt
-import time
-import requests
-# --- إعدادات التليجرام ---
-TOKEN = "ضـع_تـوكـن_بـوتـك_هـنـا"
-CHAT_ID = "ضـع_الأيـدي_الـخـاص_بـك"
-SYMBOL = "BTC/USDT"
-ex = ccxt.binance()
-def send_alert(msg):
-print(f"🚀 البوت يعمل الآن لمراقبة {SYMBOL}...")
-while True:;     try:
-        data = ex.fetch_ohlcv(SYMBOL, timeframe='1h', limit=5)
-pip install ccxt requests
-import ccxt
-import time
-import requests
-# --- إعدادات التليجرام (ضع بياناتك هنا) ---
-TOKEN = "ضـع_تـوكـن_بـوتـك_هـنـا"
-CHAT_ID = "ضـع_الأيـدي_الـخـاص_بـك"
-SYMBOL = "BTC/USDT"
-ex = ccxt.binance()
-def send_alert(msg):
-print(f"🚀 تم تشغيل بوت EXCORA.. يراقب {SYMBOL} حالياً")
-while True:;     try:
-        data = ex.fetch_ohlcv(SYMBOL, timeframe='1h', limit=5)
-python main.py
-rm main.py
-pip install ccxt requests
-nano main.py
-python main.py
+cp -r ~/ExcorArabicFont/builds /sdcard/Download/ExcorFonts
+rclone sync ~/ExcorArabicFont/builds GDrive:ExcorProject -P
+gh auth login
+Authenticate Git with your GitHub credentials
+Authenticate Git
+gh auth login
