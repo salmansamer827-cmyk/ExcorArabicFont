@@ -5,16 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.9'
-      - name: Install dependencies
-        run: |
-          pip install --upgrade pip
-          pip install buildozer
       - name: Build with Buildozer
         uses: ArtemSerebrennkov/buildozer-action@v1
         with:
           workdir: .
-          buildozer_version: master
